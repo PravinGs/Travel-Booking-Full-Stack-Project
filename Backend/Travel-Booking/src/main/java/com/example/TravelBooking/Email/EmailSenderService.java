@@ -18,5 +18,7 @@ public class EmailSenderService {
         javaMailSender.send(message);
         System.out.println("Mail send...");
 
+        System.out.println("Hello guys");
+
     }
 }
