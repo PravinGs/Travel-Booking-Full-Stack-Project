@@ -1,0 +1,54 @@
+<div class="container fluid-container mt-5">
+    <div>
+      <button mat-raised-button color="primary" class="mt-3 add" routerLink="/admin/train/add">Add Train</button>
+    </div>
+    <div class="row">
+    <div class="col-md-12">
+      <form class="flight-booking-form">
+
+      </form>
+      <table datatable  [dtOptions]="dtOptions" class="row-border hover">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Train Name</th>
+            <th>Source</th>
+            <th>Destination</th>
+            <th>Departure Date</th>
+            <th>Departure Time</th>
+            <th>Arrival Date</th>
+            <th>Booked Seats</th>  
+            <th>Price</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+  
+          <tr *ngFor="let train of trains">
+            <td> <img class="airline-logo" src={{train.trainLogoUrl}}></td>
+            <td>{{train.trainName}}</td>
+            <td>{{train.trainSource}}</td>
+            <td>{{train.trainDestination}}</td>
+            <td>{{train.trainDepartureDate | date:"dd/mm/yyyy"}}</td>
+            <td>{{train.trainDepartureDate | date:"hh:mm:ss"}}</td>
+            <td>{{train.trainArrivalDate  | date:"dd/mm/yyyy"}}</td>
+            <td>{{train.trainBookedSeats}}</td>
+            <td>&#8377;{{train.trainFare}}</td>
+            <td>
+              <button mat-raised-button color="warn" (click)="delete(train.trainId)">Delete</button>
+            </td>
+            <td>
+              <button mat-raised-button color="accent"  (click)="update(train.trainId)" >Update</button>
+            </td>
+          </tr>
+  
+        </tbody>
+      </table>
+  
+    </div>
+    </div>
+  </div>
+
+
+  

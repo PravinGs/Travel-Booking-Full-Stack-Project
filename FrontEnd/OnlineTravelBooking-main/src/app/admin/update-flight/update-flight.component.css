@@ -1,0 +1,14 @@
+.submit-btn {
+    border: none;
+    font-weight: 500;
+    background: #000;
+    color: #fff;
+    padding: 12px 40px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    
+}
+
+.dataTables_wrapper .dataTables_length select{
+  margin-top: 10px;
+}

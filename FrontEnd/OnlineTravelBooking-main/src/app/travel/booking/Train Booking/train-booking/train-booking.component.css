@@ -1,0 +1,20 @@
+img {
+    height: 100px;
+    width: 100px;
+}
+
+
+
+
+.mat-card {
+    color: #0a0e14;
+    font-weight: bold;
+}
+
+.mat-card-subtitle{
+    font-weight: 600;
+}
+
+/* img {
+    margin-left: 1rem;
+} */
